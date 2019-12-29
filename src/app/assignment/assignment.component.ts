@@ -16,7 +16,7 @@ export class AssignmentComponent implements OnInit {
 
   }
 
-  private getResults(res){
+   getResults(res){
     if(res.valid)
     { 
       this.noTitle = 0;
@@ -34,7 +34,7 @@ export class AssignmentComponent implements OnInit {
     else this.noTitle = 1;
   }
 
-  private getDescription(mediaTitle){
+   getDescription(mediaTitle){
     this.http.get(`http://www.omdbapi.com/?apikey=f9aadea2&t=${mediaTitle}`).subscribe(data=>{
         var descriptionObj:any= data;
         console.log(descriptionObj);

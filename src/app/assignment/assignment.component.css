@@ -1,0 +1,39 @@
+.search-filters-container{
+    margin-top: 2%;
+}
+
+#poster-result{
+    margin: 1% 1% 1% 1%;
+    height: 230px;
+    cursor: pointer;
+}
+
+.poster-container{
+    display: contents;
+    
+}
+
+.poster-root-container{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+ /* Removal of traditional scroll bar across browsers */
+
+.poster-root-container::-webkit-scrollbar{
+    display: none;
+}
+
+.poster-root-container{
+    -ms-overflow-style: none;
+}
+
+.poster-root-container{
+    overflow: -moz-scrollbars-none;
+}
+
+.search-filters{
+    width: 100%;
+    padding: 1.2%;
+}

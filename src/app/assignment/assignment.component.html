@@ -30,6 +30,24 @@
         </div>
     </form>
 
+    <div class="row ">
+
+        <!-- Error Generation for No Title -->
+        <div *ngIf="noTitle" class="col-12">
+            <p><b> Error:</b>Name of Movie/Series is Required, try again!</p>
+        </div>
+
+        <!-- Result List Generation -->
+        <div  class="col-12 poster-root-container">
+            <div class="card  poster-container" style="width: 14rem" *ngFor="let x of matchedMedia">
+                
+                <img (click)="getDescription(x.Title)" id="poster-result" src="{{x.Poster}}">
+                
+            </div>
+        </div>
+
+    </div>
+
     
 
    

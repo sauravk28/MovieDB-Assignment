@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+    <!-- Input Operations  -->
+    <form  #f="ngForm" >
+        <div class="row search-filters-container" >
+
+            
+            <div class="col-3">
+                <input required class="search-filters form-control" type="text" placeholder="Enter Movie/Series"  name="mediaName" ngModel>
+            </div>
+
+            <div class="col-3">
+                <input class="search-filters form-control" type="number" placeholder="Year" name="mediaYear" ngModel>
+            </div>
+                
+            <div class="col-3">
+
+                <select class="search-filters form-control" ngModel name="mediaType">
+                    <option value="series">Series</option>
+                    <option value="movie">Movie</option>
+                    <option value="episode">Episode</option>
+                </select> 
+
+            </div>
+                
+            <div class="col-3">
+                <button (click)="getResults(f)" type="button" class="btn btn-outline-success search-filters">Search</button>
+            </div>
+                    
+        </div>
+    </form>
+
+    
+
+   
+</div>

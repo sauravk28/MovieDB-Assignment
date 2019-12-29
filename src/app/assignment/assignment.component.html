@@ -48,7 +48,32 @@
 
     </div>
 
-    
+
+<!-- Description of Media -->
+<div *ngIf="matchedDescription" class="row media-desc-container">
+
+    <div class="col-4 desc-poster">
+        <div  class="card " style="width: 16rem" >
+            
+            <img  id="poster-desc" src="{{matchedDescription.Poster}}">
+            
+        </div>
+    </div>
+
+    <div class="col-8 desc-details">
+        <h2>{{matchedDescription.Title}}</h2>
+        <p><b>Plot:</b>{{matchedDescription.Plot}}</p>
+        <p><b>Actors:</b>{{matchedDescription.Actors}}</p>
+        <p><b>Awards:</b>{{matchedDescription.Awards}}</p>
+        <p><b>Director:</b>{{matchedDescription.Director}}</p>
+        <p><b>Producer:</b>{{matchedDescription.Production}}</p>
+        <p> <b>Box Office:</b>{{matchedDescription.BoxOffice}}</p>
+        <p> <b>Writer:</b>{{matchedDescription.Writer}}</p>
+        <p> <b>Released:</b>{{matchedDescription.Released}}</p>
+        <p> <b>Language:</b>{{matchedDescription.Language}}</p>
+        <p> <b>Genre:</b>{{matchedDescription.Genre}}</p>
+    </div>
+</div>
 
    
 </div>

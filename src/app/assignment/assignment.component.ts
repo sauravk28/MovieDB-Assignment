@@ -34,7 +34,12 @@ export class AssignmentComponent implements OnInit {
     else this.noTitle = 1;
   }
 
-  
-  
+  private getDescription(mediaTitle){
+    this.http.get(`http://www.omdbapi.com/?apikey=f9aadea2&t=${mediaTitle}`).subscribe(data=>{
+        var descriptionObj:any= data;
+        console.log(descriptionObj);
+        this.matchedDescription = descriptionObj;
+    });
+  }
 
 }

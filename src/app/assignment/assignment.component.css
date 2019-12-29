@@ -37,3 +37,32 @@
     width: 100%;
     padding: 1.2%;
 }
+
+.media-desc-container{
+    border: 2px solid #e4e4e4;
+    padding: 1.5%;
+    border-radius: 5px;
+    margin: 0.5% 1.5%;
+    overflow-y: scroll;
+    max-height: 400px;
+    
+}
+
+/* Removal of traditional scroll bar across browsers */
+
+.media-desc-container::-webkit-scrollbar{
+    display: none;
+}
+
+.media-desc-container{
+    -ms-overflow-style: none;
+}
+
+.media-desc-container{
+    overflow: -moz-scrollbars-none;
+}
+
+#poster-desc{
+    margin: 1% 2% 1% 2%;
+    height: 300px;
+}

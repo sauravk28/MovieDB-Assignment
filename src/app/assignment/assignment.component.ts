@@ -1,5 +1,7 @@
+import { FormsModule, Validators, FormArray } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import{FormGroup,FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-assignment',
@@ -12,8 +14,26 @@ export class AssignmentComponent implements OnInit {
   noTitle:number=0;
 
   constructor(private http:HttpClient) { }
+
+  newForm:FormGroup;
+
   ngOnInit() {
 
+    this.newForm= new FormGroup({
+        name: new FormControl('',[Validators.required,Validators.pattern('/^[a-zA-Z]*$/')]),
+        num: new FormControl('',Validators.required),
+        rad: new FormControl('yes')
+
+    });
+    
+
+  }
+
+  sendData(form){
+    console.log(form.value.name);
+    console.log(form.value.num);
+    console.log(form.value.rad);
+    
   }
 
    getResults(res){

@@ -7,6 +7,7 @@ import { AssignmentComponent } from './assignment/assignment.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { from } from 'rxjs';
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { from } from 'rxjs';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment),
     RouterModule.forRoot([
       {path:'', component:AssignmentComponent},

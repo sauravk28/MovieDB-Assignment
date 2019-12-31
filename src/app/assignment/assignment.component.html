@@ -75,5 +75,40 @@
     </div>
 </div>
 
+<div id="reactive-form-container">
+
+    <form [formGroup]="newForm" (ngSubmit)="sendData(newForm)">
+        <input type="text" formControlName="name" placeholder="Enter text">
+        <div *ngIf="newForm.get('name').touched && newForm.get('name').invalid">
+            <div *ngIf="newForm.get('name').errors.required">This field is required</div>
+            <div *ngIf="newForm.get('name').errors.pattern">Only alphabets allowed</div>
+        </div>
+
+        <input type="number" formControlName="num" placeholder="Enter the number">
+
+        <div *ngIf="newForm.get('num').touched && newForm.get('num').invalid">
+            <div *ngIf="newForm.get('num').errors.required">This field is required</div>
+            
+        </div>
+        
+        <div id="radio-container">
+            <label> Are You Working</label>
+            <br>
+            <label>
+                <input type="radio" name="rad" formControlName="rad" value="yes">Yes
+    
+            </label>
+    
+            <label>
+                <input type="radio" name="rad" formControlName="rad" value="no" >No
+                
+            </label>
+        </div>
+        
+        <button type="submit">Submit</button>
+        
+    </form>
+</div>
+
    
 </div>
